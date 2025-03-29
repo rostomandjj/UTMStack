@@ -16,6 +16,7 @@ import (
 const delayCheck = 300
 
 func main() {
+	utils.Logger.Info("Starting O365 module")
 	intKey := configuration.GetInternalKey()
 	panelServ := configuration.GetPanelServiceName()
 	client := utmconf.NewUTMClient(intKey, "http://"+panelServ)

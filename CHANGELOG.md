@@ -1,6 +1,4 @@
-# UTMStack 10.6.4 Release Notes
-### Bug Fixes
---Fixed responsive text alignment for action buttons in **Log Explorer**.
+# UTMStack 10.7.2 Release Notes
 
 ## New Features and Improvements
--- Added new compliance reports for **PCI DSS** standard.
+-- Significant improvement in CPU performance

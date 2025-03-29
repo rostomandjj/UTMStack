@@ -4,11 +4,9 @@ import (
 	"fmt"
 	"net/http"
 	"time"
-
-	"github.com/threatwinds/logger"
 )
 
-func ConnectionChecker(url string, h *logger.Logger) error {
+func ConnectionChecker(url string) error {
 	checkConn := func() error {
 		if err := CheckConnection(url); err != nil {
 			return fmt.Errorf("connection failed: %v", err)
@@ -16,7 +14,7 @@ func ConnectionChecker(url string, h *logger.Logger) error {
 		return nil
 	}
 
-	if err := h.InfiniteRetryIfXError(checkConn, "connection failed"); err != nil {
+	if err := Logger.InfiniteRetryIfXError(checkConn, "connection failed"); err != nil {
 		return err
 	}
 
